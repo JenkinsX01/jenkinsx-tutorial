@@ -1,0 +1,42 @@
+
+Showing logs for build [32mjenkinsx01-jenkinsx-tutorial-ma-6swzc-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1615457716.9626343,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mjenkinsx01-jenkinsx-tutorial-ma-6swzc-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mjenkinsx01-jenkinsx-tutorial-ma-6swzc-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mjenkinsx01-jenkinsx-tutorial-ma-6swzc-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jenkinsx01-jenkinsx-tutorial-ma-6swzc-kbk9m[0m
+{"level":"info","ts":1615457724.7993462,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/JenkinsX01/jenkinsx-tutorial.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1615457724.7994242,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1615457724.8427806,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mjenkinsx01-jenkinsx-tutorial-ma-6swzc-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mjenkinsx01-jenkinsx-tutorial-ma-6swzc-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjenkinsx01-jenkinsx-tutorial-ma-6swzc-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjenkinsx01-jenkinsx-tutorial-ma-6swzc-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mjenkinsx01-jenkinsx-tutorial-ma-6swzc-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0311 10:15:27.063062       9 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0000] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0001] Built cross stage deps: map[]                
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0001] Executing 3 build triggers                   
+error building image: error building stage: failed to optimize instructions: failed to get files used from context: failed to get fileinfo for /workspace/source/requirements.txt: lstat /workspace/source/requirements.txt: no such file or directory
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
